@@ -29,6 +29,7 @@ public class DropGame extends Game {
 	private Texture img3;
 	private Texture img4;
 	private Texture img5;
+	private Texture img6;
 	private Sound dropSound;
 	private Music rainMusic;
 	private Sound explosion;
@@ -59,6 +60,7 @@ public class DropGame extends Game {
 		img3 = new Texture("bucket.png");
 		img4 = new Texture("metor.png");
 		img5 = new Texture("win.png");
+		img6 = new Texture("loser.png");
 
 		dropSound = Gdx.audio.newSound(Gdx.files.internal("waterDrop.wav"));
 		rainMusic = Gdx.audio.newMusic(Gdx.files.internal("treeRain.mp3"));
@@ -132,6 +134,11 @@ public class DropGame extends Game {
 			if(Gdx.input.isTouched())
 				resetGame();
 		}
+		else if(score<0) {
+			batch.draw(img6, 800 / 2, 480 / 2, 300, 300);
+			raindrops.clear();
+
+		}
 		yourBitMapFontName.setColor(1.0f, 1.0f, 1.0f, 1.0f);
 		yourBitMapFontName.draw(batch,yourScoreName,25,470);
 		batch.end();
@@ -197,6 +204,7 @@ public class DropGame extends Game {
 			yourScoreName = "YOU LOSE!  Click anywhere to try again";
 			bucket.x = 800 / 2 - 64 / 2;
 			bucket.y=20;
+
 		}
 
 
@@ -251,6 +259,7 @@ public class DropGame extends Game {
 		img3.dispose();
 		img4.dispose();
 		img5.dispose();
+		img6.dispose();
 		dropSound.dispose();
 		rainMusic.dispose();
 		explosion.dispose();
