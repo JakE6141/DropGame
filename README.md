@@ -9,7 +9,9 @@ At that point you can either play again or exit the game after getting the "Winn
 * ### Scoring System: Every time you catch a raindrop your score increases by one. When you are hit with a meteor you score decreses by one. Get to ten points to win, when your score is zero you lose and can restart.
 * ### Competitve Twist: One of the other changes I made was making the game more like a competitve game. I wanted there to be some sort of barrier to win. So I added in meteors. I made the meteors spawn more frequently than the raindrops to make sure it was realitivley harder to win.
 
-![game play](gamePlay.png)
+![game play](gamePlay)
 
-![loseScreen](loseScreen.png)
+![loseScreen](loseScreen)
+
+![winScreen](winScreen)
 
